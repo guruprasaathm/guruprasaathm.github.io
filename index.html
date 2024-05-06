@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Hello World</h1>
-<p>Hi</p>
+	<img id="mycar" src="">
+	<script type="text/javascript">
+		window.onload = randomp;
+
+		var pic_rand = Array.from({ length: 500 }, (_, i) => `./cats/car_${i + 1}.jpg`);
+
+		function randomp(){
+		    var randomNum = Math.floor(Math.random() * pic_rand.length);
+		    document.getElementById("mycar").src = pic_rand[randomNum];
+		    document.getElementById("mycar").alt = "random cat";
+		}
+	</script>
 </body>
 </html>
