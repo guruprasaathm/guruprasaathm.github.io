@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>guru says smile</title>
-  	<link rel="icon" type="image/x-icon" href="./gpemblem.ico">
+  	<link rel="icon" type="image/x-icon" href="./gpemblem.ico" alt="look at this cat">
 </head>
 <body>
 	<img id="mycar" src="">
@@ -13,18 +13,27 @@
 
 		var pic_rand = Array.from({ length: 500 }, (_, i) => `./cats/car_${i + 1}.jpg`);
 
-		function randomp(){
+		function randomp() {
 		    var randomNum = Math.floor(Math.random() * pic_rand.length);
 		    document.getElementById("mycar").src = pic_rand[randomNum];
-		    document.getElementById("mycar").alt = "random cat";
 		}
 	</script>
 	<style type="text/css">
-		img {
-		  display: block;
-		  margin-left: auto;
-		  margin-right: auto;
-		  width: 40%;
+		@media screen and (min-width: 768px) {
+			img {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  width: 40%;
+			}
+		}
+		@media screen and (max-width: 768px) {
+			img {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  width: 100%;
+			}
 		}
 	</style>
 </body>
